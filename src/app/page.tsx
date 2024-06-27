@@ -1,9 +1,0 @@
-import { Button } from "@mui/material";
-
-export default function page() {
-  return (
-    <div>
-      <Button variant="contained">Contained</Button>
-    </div>
-  );
-}
