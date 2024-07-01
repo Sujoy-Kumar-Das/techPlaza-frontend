@@ -1,4 +1,3 @@
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
   Box,
@@ -12,6 +11,7 @@ import {
 import Link from "next/link";
 import { navItemsArray } from "./navItemsArray";
 import NavUser from "./navUser/NavUser";
+import SearchBtn from "./searchBtn/SearchBtn";
 export default function NavBar() {
   const navItems = (
     <>
@@ -47,20 +47,7 @@ export default function NavBar() {
           </List>
 
           <Stack direction={"row"} spacing={2} alignItems={"center"}>
-            <IconButton size="small" sx={{ ml: 2 }}>
-              <Box
-                sx={{
-                  color: "text.primary",
-                  height: 32,
-                  width: 32,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <SearchIcon />
-              </Box>
-            </IconButton>
+            <SearchBtn />
             <IconButton size="small" sx={{ ml: 2 }}>
               <Box
                 sx={{

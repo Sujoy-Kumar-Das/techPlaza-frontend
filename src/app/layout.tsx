@@ -3,7 +3,10 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+// swiper js css files
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
