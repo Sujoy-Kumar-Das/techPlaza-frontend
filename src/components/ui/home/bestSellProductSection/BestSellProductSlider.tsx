@@ -2,7 +2,7 @@
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductCard from "../../card/ProductCard";
-export default function NewProductSlider({ data }) {
+export default function BestSellProductSlider({ data }) {
   return (
     <Swiper
       autoplay={{
@@ -26,7 +26,7 @@ export default function NewProductSlider({ data }) {
         },
       }}
     >
-      {data?.map((item, index) => (
+      {data?.map((item) => (
         <SwiperSlide key={item._id}>
           <ProductCard data={item} />
         </SwiperSlide>

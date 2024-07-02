@@ -33,6 +33,11 @@ const lightTheme = createTheme({
       defaultProps: {
         maxWidth: "xl",
       },
+      styleOverrides: {
+        root: {
+          padding: "40px 0px",
+        },
+      },
     },
   },
 });

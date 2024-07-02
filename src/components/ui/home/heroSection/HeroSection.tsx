@@ -1,4 +1,5 @@
 "use client";
+import { Container } from "@mui/material";
 import { useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,20 +17,22 @@ export default function HeroSection({ data }) {
     });
   };
   return (
-    <Swiper
-      onSwiper={handleSwiperInit}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-        reverseDirection: true,
-      }}
-      modules={[Autoplay, Pagination, Navigation]}
-    >
-      {data?.map((item, index) => (
-        <SwiperSlide key={item._id}>
-          <HomeSliderCard item={item} sliderIndex={swiper} index={index} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <Container>
+      <Swiper
+        onSwiper={handleSwiperInit}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+      >
+        {data?.map((item, index) => (
+          <SwiperSlide key={item._id}>
+            <HomeSliderCard item={item} sliderIndex={swiper} index={index} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Container>
   );
 }

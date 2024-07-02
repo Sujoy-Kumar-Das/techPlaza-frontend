@@ -7,13 +7,14 @@ import {
   Card,
   CardActionArea,
   CardContent,
+  Divider,
   IconButton,
   Stack,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
 
-export default function NewProductCard({ data }) {
+export default function ProductCard({ data }) {
   const { imageUrl, name } = data;
 
   return (
@@ -30,6 +31,14 @@ export default function NewProductCard({ data }) {
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Image src={imageUrl} height={200} width={200} alt={name} />
         </Box>
+        <Divider
+          sx={{
+            height: "2px",
+            background:
+              "linear-gradient(to right, rgba(128, 128, 128, 0.05), rgba(128, 128, 128, 1), rgba(128, 128, 128, 0.05))",
+            border: "none",
+          }}
+        />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
@@ -60,7 +69,7 @@ export default function NewProductCard({ data }) {
           position: "absolute",
           top: "50%",
           right: "5%",
-          transform: "translateY(-50%)",
+          transform: "translateY(-80%)",
           display: "flex",
           flexDirection: "column",
           gap: 1.5,
@@ -75,13 +84,14 @@ export default function NewProductCard({ data }) {
             width: "30px",
             padding: "20px",
             transition: "transform 0.3s ease, opacity 0.3s ease",
-            transform: "translateX(500px)",
+            transform: "translateX(100%)",
             opacity: 0,
             transitionDelay: "0.1s",
             "&:hover": {
               backgroundColor: "primary.main",
               color: "#ffff",
               borderColor: "transparent",
+              transform: "scale(1.2) translateX(0)",
               transitionDelay: "0s",
             },
           }}
@@ -97,13 +107,14 @@ export default function NewProductCard({ data }) {
             width: "30px",
             padding: "20px",
             transition: "transform 0.3s ease, opacity 0.3s ease",
-            transform: "translateX(500px)",
+            transform: "translateX(100%)",
             opacity: 0,
             transitionDelay: "0.4s",
             "&:hover": {
               backgroundColor: "primary.main",
               color: "#ffff",
               borderColor: "transparent",
+              transform: "scale(1.2) translateX(0)",
               transitionDelay: "0s",
             },
           }}
@@ -119,13 +130,14 @@ export default function NewProductCard({ data }) {
             width: "30px",
             padding: "20px",
             transition: "transform 0.3s ease, opacity 0.3s ease",
-            transform: "translateX(500px)",
+            transform: "translateX(100%)",
             opacity: 0,
             transitionDelay: "0.7s",
             "&:hover": {
               backgroundColor: "primary.main",
               color: "#ffff",
               borderColor: "transparent",
+              transform: "scale(1.2) translateX(0)",
               transitionDelay: "0s",
             },
           }}

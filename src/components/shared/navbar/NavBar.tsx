@@ -1,7 +1,6 @@
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import {
   Box,
-  Container,
   IconButton,
   List,
   ListItem,
@@ -12,6 +11,7 @@ import Link from "next/link";
 import { navItemsArray } from "./navItemsArray";
 import NavUser from "./navUser/NavUser";
 import SearchBtn from "./searchBtn/SearchBtn";
+
 export default function NavBar() {
   const navItems = (
     <>
@@ -24,9 +24,24 @@ export default function NavBar() {
       ))}
     </>
   );
+
   return (
-    <Box>
-      <Container>
+    <Box
+      sx={{
+        width: "100%",
+        bgcolor: "transparent",
+        boxShadow: 0,
+        paddingX: 2,
+        paddingY: 1,
+      }}
+    >
+      <Box
+        sx={{
+          maxWidth: "xl",
+          width: "100%",
+          margin: "auto",
+        }}
+      >
         <Stack py={2} direction={"row"} justifyContent={"space-between"}>
           <Box sx={{ display: "flex" }}>
             <Typography component={"h1"} variant="h4" fontWeight={"bold"}>
@@ -66,7 +81,7 @@ export default function NavBar() {
             <NavUser />
           </Stack>
         </Stack>
-      </Container>
+      </Box>
     </Box>
   );
 }

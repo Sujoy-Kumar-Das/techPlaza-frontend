@@ -1,9 +1,10 @@
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 import { Container, Divider, Stack, Typography } from "@mui/material";
 import Link from "next/link";
+import ProductCard from "../../card/ProductCard";
+import BestSellProductSlider from "./BestSellProductSlider";
 
-import NewProductSlider from "./NewProductSlider";
-export default function NewProductsSection({ data }) {
+export default function BestSellProductSection({ data }) {
   return (
     <Container>
       <Stack
@@ -12,7 +13,7 @@ export default function NewProductsSection({ data }) {
         alignItems={"center"}
       >
         <Typography component={"h1"} variant="h5" fontWeight={"bold"}>
-          New Products
+          Best Sell Products
         </Typography>
         <Stack
           component={Link}
@@ -34,7 +35,7 @@ export default function NewProductsSection({ data }) {
       </Stack>
       <Divider component={"div"} sx={{ marginTop: 3, marginBottom: 5 }} />
 
-      <NewProductSlider data={data} />
+      <BestSellProductSlider data={data} />
     </Container>
   );
 }

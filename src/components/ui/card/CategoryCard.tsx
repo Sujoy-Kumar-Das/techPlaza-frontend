@@ -42,7 +42,7 @@ export default function CategoryCard({ data }) {
           }}
           className="hide-text"
         >
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" component="div">
             {name}
           </Typography>
         </CardContent>
