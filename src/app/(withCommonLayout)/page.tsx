@@ -17,7 +17,7 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection data={data} />
-      <CategorySection data={data} />
+      {/* <CategorySection data={data} />
       <SellProductSection data={data} />
       <NewProductsSection data={data} />
       <FeaturedSection />
@@ -25,7 +25,7 @@ export default async function HomePage() {
       <BestSellProductSection data={data} />
       <SingleItemBanner />
       <TopBrandSection data={data} />
-      <DiscountSection />
+      <DiscountSection /> */}
     </>
   );
 }

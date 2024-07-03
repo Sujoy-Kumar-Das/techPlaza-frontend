@@ -15,12 +15,15 @@ import {
 import Image from "next/image";
 
 export default function ProductCard({ data }) {
-  const { imageUrl, name } = data;
+  const { thumbnail, title } = data;
 
   return (
     <Card
       sx={{
         position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        height: "350px",
         "&:hover .show-buttons .button": {
           transform: "translateX(0)",
           opacity: 1,
@@ -29,7 +32,7 @@ export default function ProductCard({ data }) {
     >
       <CardActionArea>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <Image src={imageUrl} height={200} width={200} alt={name} />
+          <Image src={thumbnail} height={200} width={200} alt={title} />
         </Box>
         <Divider
           sx={{
@@ -39,10 +42,12 @@ export default function ProductCard({ data }) {
             border: "none",
           }}
         />
-        <CardContent>
+        <CardContent sx={{ flexGrow: 1 }}>
           <Typography gutterBottom variant="h5" component="div">
-            {name}
+            {title}
           </Typography>
+        </CardContent>
+        <CardContent sx={{ paddingTop: 0 }}>
           <Stack
             direction={"row"}
             justifyContent={"space-between"}
@@ -52,9 +57,7 @@ export default function ProductCard({ data }) {
               $2000
             </Typography>
             <Stack direction={"row"} alignItems={"center"} spacing={"4px"}>
-              <Typography variant="body2" color="text.secondary">
-                <StarIcon />
-              </Typography>
+              <StarIcon sx={{ fontSize: 16, color: "text.secondary" }} />
               <Typography variant="body2" color="text.secondary">
                 4.5
               </Typography>
@@ -69,10 +72,11 @@ export default function ProductCard({ data }) {
           position: "absolute",
           top: "50%",
           right: "5%",
-          transform: "translateY(-80%)",
+          transform: "translateY(-90%)",
           display: "flex",
           flexDirection: "column",
           gap: 1.5,
+          mt: "auto",
         }}
       >
         <IconButton
