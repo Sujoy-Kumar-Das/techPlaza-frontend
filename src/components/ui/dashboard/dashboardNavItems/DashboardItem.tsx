@@ -1,6 +1,4 @@
 import { IDashboardItem } from "@/types";
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
@@ -15,7 +13,7 @@ const dashboardItems: IDashboardItem[] = [
     access: "all",
   },
   {
-    text: "Payment & Integrations",
+    text: "Payment & Instalment",
     link: "/dashboard/user/payments",
     icon: <PaidIcon />,
     access: "user",
@@ -33,12 +31,6 @@ const dashboardItems: IDashboardItem[] = [
     access: "user",
   },
   {
-    text: "Discounts",
-    link: "/dashboard/user/discount",
-    icon: <CardGiftcardIcon />,
-    access: "user",
-  },
-  {
     text: "Security & Access",
     link: "/dashboard/user/security",
     icon: <SecurityIcon />,
@@ -48,12 +40,6 @@ const dashboardItems: IDashboardItem[] = [
     text: "Notification",
     link: "/dashboard/user/notification",
     icon: <NotificationsIcon />,
-    access: "user",
-  },
-  {
-    text: "Contact Us",
-    link: "/contact-us",
-    icon: <ContactEmergencyIcon />,
     access: "user",
   },
 ];
