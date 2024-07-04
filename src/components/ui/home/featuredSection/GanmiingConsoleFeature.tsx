@@ -37,7 +37,7 @@ export default function MobileFeature() {
                 padding: "3px 0px",
                 textAlign: "center",
                 borderRadius: "30px",
-                color: "white",
+                color: "background.default",
               }}
               component="h1"
               fontSize={12}

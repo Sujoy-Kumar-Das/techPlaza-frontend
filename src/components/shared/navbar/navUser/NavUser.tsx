@@ -66,6 +66,12 @@ export default function NavUser() {
             <Typography>sujoykumardas75@gmail.com</Typography>
           </Box>{" "}
         </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <ListItemIcon>
+            <LocalMallOutlinedIcon fontSize="small" />{" "}
+          </ListItemIcon>
+          My Profile
+        </MenuItem>
 
         <MenuItem onClick={handleClose}>
           <ListItemIcon>

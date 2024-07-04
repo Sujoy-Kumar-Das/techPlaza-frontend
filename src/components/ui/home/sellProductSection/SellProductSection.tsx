@@ -28,7 +28,7 @@ export default function SellProductSection({ data }) {
           <Box>
             <Stack sx={{ textAlign: "center" }}>
               <Typography
-                color="white"
+                color="background.default"
                 variant="h6"
                 fontWeight={"bold"}
                 component={"h1"}
@@ -39,7 +39,7 @@ export default function SellProductSection({ data }) {
                 component={Link}
                 href={"/"}
                 sx={{
-                  color: "whitesmoke",
+                  color: "background.paper",
                   textDecoration: "none",
                   fontSize: 18,
                 }}
@@ -57,10 +57,10 @@ export default function SellProductSection({ data }) {
               justifyContent={"center"}
               sx={{
                 textDecoration: "none",
-                color: "white",
+                color: "background.default",
               }}
             >
-              <Typography color="white" fontSize={"16px"}>
+              <Typography color="background.default" fontSize={"16px"}>
                 View All
               </Typography>
               <ArrowForwardIosOutlinedIcon

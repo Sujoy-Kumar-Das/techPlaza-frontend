@@ -13,9 +13,10 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductCard({ data }) {
-  const { thumbnail, title } = data;
+  const { thumbnail, title, id } = data;
 
   return (
     <Card
@@ -145,6 +146,8 @@ export default function ProductCard({ data }) {
               transitionDelay: "0s",
             },
           }}
+          component={Link}
+          href={`/products/${id}`}
         >
           <RemoveRedEyeIcon />
         </IconButton>

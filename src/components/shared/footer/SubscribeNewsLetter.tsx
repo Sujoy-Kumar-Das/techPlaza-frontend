@@ -9,16 +9,16 @@ export default function SubscribeNewsLetter() {
         sx={{
           "& .MuiOutlinedInput-root": {
             "& fieldset": {
-              borderColor: "white",
+              borderColor: "#fffff",
             },
             "&:hover fieldset": {
-              borderColor: "white",
+              borderColor: "#fffff",
             },
             "&.Mui-focused fieldset": {
-              borderColor: "white",
+              borderColor: "#fffff",
             },
           },
-          input: { color: "white" },
+          input: { color: "#fffff" },
         }}
       />
       <Button size="small">Subscribe</Button>

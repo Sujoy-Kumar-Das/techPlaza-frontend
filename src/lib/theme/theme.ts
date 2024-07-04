@@ -14,8 +14,8 @@ const lightTheme = createTheme({
       secondary: "#666666",
     },
     background: {
-      default: "white",
-      paper: "whitesmoke",
+      default: "#FFFFFF",
+      paper: "#F5F5F5",
     },
   },
   components: {
